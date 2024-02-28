@@ -35,7 +35,14 @@ func GetVersionManifest() (*VersionManifest, error) {
 	}
 	client := &http.Client{}
 	resp, err := client.Do(request)
-	defer resp.Body.Close()
+	if err != nil {
+		return nil, err
+	}
+	defer func() {
+		if resp.Body != nil {
+			_ = resp.Body.Close()
+		}
+	}()
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
