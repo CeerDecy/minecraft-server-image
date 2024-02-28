@@ -1,5 +1,7 @@
 # Minecraft Server Images
 
+[中文](./README_CN.md)
+
 This repository is used for automatically building and uploading Minecraft server images, which can be deployed on Docker or Kubernetes clusters.
 
 **Automatic Build Process**: This repository contains an automated GitHub Actions workflow that triggers on each push to the repository, automatically building the specified version of the Minecraft server image and pushing it to [Docker Hub](https://hub.docker.com/r/ceerdecy/minecraft-server).

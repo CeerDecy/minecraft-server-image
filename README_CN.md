@@ -1,5 +1,7 @@
 # Minecraft Server Images
 
+[English](./README.md)
+
 本仓库用于自动构建和上传Minecraft服务器镜像，可以用于在部署在Docker或Kubernetes集群上。
 
 **自动构建流程**：本仓库包含了一个自动化的GitHub Actions工作流，它在每次推送到仓库时触发，自动构建指定版本的Minecraft服务器镜像，并将其推送到[Docker Hub](https://hub.docker.com/r/ceerdecy/minecraft-server)中。
