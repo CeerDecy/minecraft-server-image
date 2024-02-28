@@ -34,10 +34,10 @@ jobs:
           
           echo "Filtered folders: $filtered_folders"
           
+          docker buildx create --name multi-platform --use --platform linux/amd64,linux/arm64 --driver docker-container
+
           for folder in $filtered_folders; do
             tag="${folder#minecraft-server-}"
-            echo "building minecraft-server::$tag"
-            docker buildx build --platform=linux/amd64 -t ceerdecy/minecraft-server:"$tag" ./"$folder"
-            echo "pushing minecraft-server::$tag"
-            docker push ceerdecy/minecraft-server:"$tag"
+            echo "build and push minecraft-server::$tag"
+            docker buildx build --platform linux/amd64,linux/arm64 -t ceerdecy/minecraft-server:"$tag" --push ./"$folder"
           done
