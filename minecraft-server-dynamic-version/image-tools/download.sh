@@ -1,7 +1,7 @@
 #!/bin/bash
 version=$1
 
-output=$(./image-tools/version-url-tool-linux-amd64 -version "$version")
+output=$(./image-tools/version-tool-linux-amd64 -version "$version")
 
 IFS=' ' read -ra array <<< "$output"
 
