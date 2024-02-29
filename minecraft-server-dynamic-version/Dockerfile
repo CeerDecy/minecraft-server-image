@@ -11,7 +11,7 @@ ENV SERVER_JAR server.jar
 
 RUN sed -i s/deb.debian.org/mirrors.aliyun.com/g /etc/apt/sources.list  \
     && apt-get update -y  \
-    && apt-get install -y openjdk-17-jdk openjdk-17-jre curl  \
+    && apt-get install -y curl  \
     && rm -rf /var/lib/apt/lists/*
 
 RUN chmod +x run.sh
