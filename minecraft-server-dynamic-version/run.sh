@@ -2,6 +2,7 @@
 
 # 定义文件路径
 file_path="server.jar"
+jre=""
 
 # 判断文件是否存在
 if [ -f "$file_path" ]; then
@@ -9,7 +10,14 @@ if [ -f "$file_path" ]; then
 else
     echo "server file does not exist, prepare downloading"
     ./image-tools/download.sh "$SERVER_VERSION"
+    jre="$SERVER_JRE"
+    if [ -z "$jre" ]; then
+      echo "jre is empty, parsing"
+      jre=$(./image-tools/parse-jre.sh "$SERVER_VERSION")
+    fi
+    apt-get install -y "$jre" && rm -rf /var/lib/apt/lists/*
     chmod +x server.jar
+    echo "init jre"
 fi
 
 echo "Starting server..."
