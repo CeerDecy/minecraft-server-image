@@ -15,7 +15,10 @@ else
       echo "jre is empty, parsing"
       jre=$(./image-tools/parse-jre.sh "$SERVER_VERSION")
     fi
-    apt-get install -y "$jre" && rm -rf /var/lib/apt/lists/*
+    sed -i s/deb.debian.org/mirrors.aliyun.com/g /etc/apt/sources.list  \
+        && apt-get update -y  \
+        && apt-get install -y "$jre" \
+        && rm -rf /var/lib/apt/lists/*
     chmod +x server.jar
     echo "init jre"
 fi
