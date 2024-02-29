@@ -14,7 +14,7 @@ RUN sed -i s/deb.debian.org/mirrors.aliyun.com/g /etc/apt/sources.list  \
     && apt-get install -y curl  \
     && rm -rf /var/lib/apt/lists/*
 
-RUN chmod +x run.sh
+RUN chmod +x image-tools/download.sh image-tools/parse-jre.sh image-tools/version-tool-linux-amd64 run.sh
 
 EXPOSE 25565
 
