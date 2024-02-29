@@ -2,6 +2,8 @@
 
 [English](CONTRIBUTING.md)
 
+[构建教程](https://etov.club/index.php/2024/02/build-minecraft-server-image/)
+
 我们欢迎对 Minecraft 服务器镜像项目的贡献！无论你是一位经验丰富的开发者还是一个好奇的初学者，都有许多方式可以让你参与进来，帮助这个项目变得更好。以下是帮助你开始的一个指南。
 
 ## 行为守则

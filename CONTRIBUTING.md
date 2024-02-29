@@ -2,6 +2,8 @@
 
 [中文](CONTRIBUTING_CN.md)
 
+[Build Tutorial](https://etov.club/index.php/2024/02/build-minecraft-server-image/)
+
 We welcome contributions to the Minecraft Server Images project! Whether you're a seasoned developer or a curious beginner, there are many ways to get involved and help make this project better. Here's a guide to help you get started.
 
 ## Code of Conduct
