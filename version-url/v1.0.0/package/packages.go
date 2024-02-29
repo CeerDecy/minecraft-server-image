@@ -31,7 +31,11 @@ func GetVersionPackage(url string) (*Package, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if resp.Body == nil {
+			_ = resp.Body.Close()
+		}
+	}()
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
