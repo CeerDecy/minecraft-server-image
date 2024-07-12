@@ -21,3 +21,10 @@ This repository is used for automatically building and uploading Minecraft serve
 **Contributions**: We welcome contributions from the community. If you find issues or have suggestions for improvement, please help us improve this project by submitting issues or pull requests.
 
 **Disclaimer**: Please ensure you comply with Minecraft's terms of use and relevant laws and regulations.
+
+## Example
+
+Running a Minecraft server with the 1.20.4 version on Docker:
+```bash
+docker run --name mc-server -p 25565:25565 -d ceerdecy/minecraft-server:1.20.4
+```

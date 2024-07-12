@@ -22,3 +22,12 @@
 
 **免责声明**：请确保您遵守Minecraft的使用条款和相关法律法规。
 
+## 示例
+
+本示例使用docker部署了一个Minecraft 1.20.4的服务器
+
+```bash
+docker run --name mc-server -p 25565:25565 -d ceerdecy/minecraft-server:1.20.4
+```
+
+输入
